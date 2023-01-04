@@ -43,22 +43,6 @@ body {
   padding: 1rem;
 }
 
-.test {
-  display: grid;
-  grid-template: repeat(15, 1fr) / repeat(10, 1fr);
-}
-
-#info-card {
-  grid-column: 1 / 4;
-}
-
-#music-card {
-  grid-row: 2;
-  grid-column: 4 / 6;
-}
-/* TODO: setup 10x10 grid (or whatever) and use grid-row and grid-column on the items
-to set the start/end */
-
 .card {
   border: 2px solid black;
   border-radius: 3px;
@@ -68,6 +52,27 @@ to set the start/end */
   background-color: white;
   margin: 2rem;
 }
+
+.intro-card {
+  margin-left: 5rem;
+}
+
+.header-grid {
+  display: grid;
+  grid-template: repeat(5, auto) /  1fr 1fr;
+}
+
+.info-card {
+  grid-row: 2 / 6;
+}
+
+.music-card {
+  grid-row: 1 / 5;
+}
+/* TODO: setup 10x10 grid (or whatever) and use grid-row and grid-column on the items
+to set the start/end */
+
+
 
 #project-card-container {
   display: flex;
