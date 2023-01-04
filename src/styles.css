@@ -48,9 +48,18 @@ body {
   border-radius: 3px;
   box-shadow: 4px 4px #B8BF9A;
   width: 50%;
-  padding: 1rem;
   background-color: white;
   margin: 2rem;
+}
+
+.card-header-bar {
+  border-bottom: 2px solid black;
+  width: 100%;
+  height: 1.5rem;
+}
+
+.card-content {
+  padding: 1rem;
 }
 
 .intro-card {
@@ -69,8 +78,6 @@ body {
 .music-card {
   grid-row: 1 / 5;
 }
-/* TODO: setup 10x10 grid (or whatever) and use grid-row and grid-column on the items
-to set the start/end */
 
 
 
