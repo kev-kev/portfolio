@@ -24,6 +24,7 @@ const barColors = {
   pink: '#FF93F4',
   // black: '#1B1B1B',
 };
+
 const cards = document.getElementsByClassName('card');
 const colorValues = Object.values(barColors);
 for(const card of cards) {
