@@ -2,7 +2,7 @@
 /* 
 background: #B3C383
 background grid lines: #CED8AE
-main content background: #F4FFCA
+main content background: #FBFFCA
 card headers: blue - #82B4FF
               red - #FF9587
               green - #97DF5F
@@ -33,7 +33,7 @@ body {
 }
 
 .main-content {
-  background-color: #F4FFCA;
+  background-color: #FBFFCC;
   margin: 2rem 4rem;
   display: flex;
   flex-direction: column;
@@ -68,18 +68,21 @@ body {
 
 .header-grid {
   display: grid;
-  grid-template: repeat(5, auto) /  1fr 1fr;
+  grid-template: repeat(8, 1fr) /  1fr 1fr;
+}
+
+.header-card {
+  justify-self: center;
+  width: 75%;
 }
 
 .info-card {
-  grid-row: 2 / 6;
+  grid-row: 3 / 9;
 }
 
 .music-card {
   grid-row: 1 / 5;
 }
-
-
 
 #project-card-container {
   display: flex;
