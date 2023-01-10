@@ -12,6 +12,7 @@ for(let i = 0; i < 4; i++) {
   i % 2 === 0 
     ? projectCard.setAttribute('class', 'card project-card l-offset')
     : projectCard.setAttribute('class', 'card project-card r-offset')
+  console.log(projectCard)
   document.getElementById('project-card-container').append(projectCard);
 }
 
