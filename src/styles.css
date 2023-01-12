@@ -135,6 +135,10 @@ body {
   width: 80%;
 }
 
+.project-card-img {
+  width: 80%;
+}
+
 .card-bar{
   display: flex;
   width: 100%;

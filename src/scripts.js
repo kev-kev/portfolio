@@ -10,8 +10,6 @@ const barColors = {
 
 const colorValues = Object.values(barColors);
 window.addEventListener("load", () => { 
-  
-
   const projectCardContainer = document.getElementById('project-card-container');
   for(let i = 0; i < projectData.length; i++) {
     const projectCard = document.createElement('div');
@@ -24,13 +22,13 @@ window.addEventListener("load", () => {
     content.setAttribute('class', 'project-card-content card-content');
     cardBar.append(iconContainer);
     projectCard.append(cardBar, content);
-    // projectCard.append();
     projectCardContainer.append(projectCard);
   }
   
   let idx = 0;
   [...document.getElementsByClassName('project-card-content')].forEach((content) => {
     content.innerHTML = `
+      <img class="project-card-img" src=${projectData[idx].imagePath} />
       <h2 class="card-title">${projectData[idx].name}</h2>
       <p class="card-description">${projectData[idx].notes}</p>
     `

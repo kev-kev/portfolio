@@ -4,7 +4,7 @@ const projectData = [
     url: "https://github.com/kev-kev/lets-eat",
     notes:
       "Web app to help you and your partner plan meals. Frontend: React with context and Material-UI, Backend: Ruby on Rails",
-    imagePath: "./images/lets-eat.png",
+    imagePath: "./images/letsEat.png",
     inProgress: false,
   },
   {
@@ -34,7 +34,7 @@ const projectData = [
     name: "lunchtime",
     url: "https://github.com/kev-kev/lunchtime",
     notes: "Top-down pixel shooter game, made with Phaser + ES6 + Webpack",
-    imagePath: "./images/lunchtime.png",
+    imagePath: "./images/lunchTime.png",
     inProgress: true,
   },
   {
@@ -42,7 +42,7 @@ const projectData = [
     url: "https://github.com/kev-kev/game-of-life",
     notes:
       "An implementation of Conway's Game of Life. Created using HTML5 Canvas",
-    imagePath: "./images/gameoflife.png",
+    imagePath: "./images/gameOfLife.png",
     inProgress: false,
   },
   {
@@ -59,7 +59,7 @@ const projectData = [
     url: "https://github.com/kev-kev/drumblr-frontend",
     notes:
       "Browser-based drum machine made with React and the Web Drum Sequencer library.",
-    imagePath: "./images/drumblrImage.png",
+    imagePath: "./images/drumblr.png",
     inProgress: false,
   },
   {
@@ -67,7 +67,7 @@ const projectData = [
     url: "https://github.com/kev-kev/superPetBros",
     notes:
       "Create your very own virtual pet and battle it against others. Vanilla JS frontend and Ruby on Rails backend",
-    imagePath: "./images/letsEat.png",
+    imagePath: "./images/superPetBros.png",
     inProgress: false,
   },
 ];
