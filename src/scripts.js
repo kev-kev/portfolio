@@ -1,3 +1,5 @@
+import { projectData } from './ProjectData.js';
+
 const barColors = {
   blue: '#82B4FF',
   red: '#FF9587',
@@ -7,7 +9,6 @@ const barColors = {
 };
 
 const colorValues = Object.values(barColors);
-
 window.addEventListener("load", () => { 
   const bars = document.getElementsByClassName('card-bar');
   for(const bar of bars) {
@@ -23,10 +24,12 @@ window.addEventListener("load", () => {
     `;
   }
   
+  let idx = 0;
   [...document.getElementsByClassName('project-card-content')].forEach((content) => {
     content.innerHTML = `
-      <h2 class="card-title">Lorem ipsum dolor</h2>
-      <p class="card-description">Sit amet consectetur adipisicing elit. Doloremque odio harum alias magni fugit cum, saepe nesciunt pariatur! Consequatur accusantium dolore animi iusto et perspiciatis ex totam a nam dolores?</p>
+      <h2 class="card-title">${projectData[idx].name}</h2>
+      <p class="card-description">${projectData[idx].notes}</p>
     `
+    idx++;
   })
 });
