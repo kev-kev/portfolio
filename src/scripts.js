@@ -28,7 +28,7 @@ window.addEventListener("load", () => {
   let idx = 0;
   [...document.getElementsByClassName('project-card-content')].forEach((content) => {
     content.innerHTML = `
-      <img class="project-card-img" src=${projectData[idx].imagePath} />
+      <div class="project-card-img" style="background-image: url('${projectData[idx].imagePath}');"></div>
       <h2 class="card-title">${projectData[idx].name}</h2>
       <p class="card-description">${projectData[idx].notes}</p>
     `

@@ -136,7 +136,10 @@ body {
 }
 
 .project-card-img {
-  width: 80%;
+  height: 20rem;
+  background-size: cover;
+  background-position: bottom 10px;
+
 }
 
 .card-bar{
