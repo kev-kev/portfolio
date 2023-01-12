@@ -18,7 +18,7 @@ h2 {
   font-family: "Outfit";
 }
 
-p, button {
+p, button, span {
   font-family: "Spline Sans";
 }
 
@@ -135,23 +135,41 @@ body {
   width: 80%;
 }
 
+.project-card-content {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .project-card-img {
   height: 20rem;
+  width: 20rem;
   background-size: cover;
-  background-position: bottom 10px;
+  border-radius: 4px;
+  box-shadow: 3px 3px #6b6b6b;
+}
 
+.project-card-text-container {
+  width: 40%;
+}
+
+.project-card-description {
+  margin-bottom: 3rem;
 }
 
 .card-bar{
   display: flex;
-  width: 100%;
+  justify-content: space-between;
+  padding: .5rem;
+}
+
+card-bar-title {
+
 }
 
 .card-bar-icon-container {
-  display: flex;
+  /* padding: .3rem; */
 }
 
 .bar-icon {
-  /* margin: .4rem; */
-  padding: .4rem;
+  padding: 0 .3rem;
 }
