@@ -105,7 +105,7 @@ body {
 
 .header-grid-2 {
   display: grid;
-  grid-template: repeat(6, 1fr) /  1fr 1fr;
+  grid-template: repeat(6, 1fr) /  repeat(4, 1fr);
 }
 
 .header-card {
@@ -120,10 +120,35 @@ body {
 }
 
 .music-card {
-  grid-column: 4 / 6;
+  grid-column: 3 / 6;
   grid-row: 1 / 5;
   width: 95%;
 }
+
+.progress-bar-container {
+  position: relative;
+  height: 20px;
+}
+
+.progress-bar {
+  height: 0px;
+  border: none;
+  border-top: 3px solid black;
+  top: 10px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.progress-circle {
+  position: absolute;
+  z-index: 2;
+  top: 11px;
+  left: 75%;
+  border-radius: 58%;
+  background-color: white;
+}
+
 
 #project-card-container {
   display: flex;
@@ -157,16 +182,25 @@ body {
   width: 20rem;
   background-size: cover;
   border-radius: 4px;
-  box-shadow: 3px 3px #858585;
-  border: 2px solid rgb(78, 78, 78);
+  /* box-shadow: 3px 3px #858585; */
+  /* border: 2px solid rgb(78, 78, 78); */
 }
 
 .project-card-text-container {
+  margin: 1rem 0 3rem;
   width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  /* justify-content: space-around; */
+}
+
+.project-card-title {
+  margin: 0;
 }
 
 .project-card-description {
-  margin-bottom: 3rem;
+  margin: 0;
 }
 
 .card-bar{
@@ -177,7 +211,6 @@ body {
 }
 
 card-bar-title {
-
 }
 
 .card-bar-icon-container {
@@ -187,3 +220,4 @@ card-bar-title {
 .bar-icon {
   padding: 0 .3rem;
 }
+
