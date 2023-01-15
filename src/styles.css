@@ -123,6 +123,20 @@ body {
   grid-column: 3 / 6;
   grid-row: 1 / 5;
   width: 95%;
+} 
+
+.music-card > .card-content {
+  text-align: center;
+  padding: 1rem 2rem;
+}
+
+.music-card-song {
+  font-size: 20px;
+}
+
+.music-card-artist {
+  margin-top: .3rem;
+  font-size: 14px;
 }
 
 .progress-bar-container {
@@ -142,13 +156,18 @@ body {
 
 .progress-circle {
   position: absolute;
-  z-index: 2;
-  top: 11px;
-  left: 75%;
-  border-radius: 58%;
+  top: 12px;
+  left: 60%;
   background-color: white;
 }
 
+.music-icons-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  width: 100%;
+}
 
 #project-card-container {
   display: flex;
