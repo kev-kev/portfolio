@@ -18,6 +18,49 @@ function typeWriter(ele, text, idx = 0, delay = 100) {
   }
 }
 
+var tag = document.createElement('script');
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+function onPlayerReady(event) {
+  // add event listeners to player buttons
+  document.querySelector(".fa-circle-play").addEventListener("click", () => {
+    event.target.playVideo();
+  });
+}
+
+function onPlayerStateChange(event) {
+  console.log("player state changed to", event.data);
+  if (event.data == YT.PlayerState.PLAYING && !done) {
+    console.log("Going to stop video in 6 secs");
+    setTimeout(stopVideo, 6000);
+  }
+}
+
+function stopVideo() {
+  player.stopVideo();
+}
+
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {
+    height: '0',
+    width: '0',
+    videoId: 'y-7qbdxIPWc',
+    playerVars: {
+      'playsinline': 1
+    },
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    }
+  });
+}
+
+window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
+
 window.addEventListener("load", () => { 
   // create project cards
   const projectCardContainer = document.getElementById('project-card-container');
