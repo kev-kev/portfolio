@@ -8,12 +8,13 @@ const barColors = {
   pink: '#FF93F4',
 };
 
-let i = 0;
-function typeWriter(ele, text, delay = 150) {
-  if ( i < text.length ) {
-    ele.innerHTML += text.charAt(i);
-    i++;
-    setTimeout(() => { typeWriter(ele, text) }, delay);
+const delays = [75, 100, 150];
+function typeWriter(ele, text, idx = 0, delay = 100) {
+  if (idx < text.length) {
+    ele.innerHTML += text.charAt(idx);
+    if(text.charAt(idx + 1) === ' ') delay = 250;
+    else delay = delays[Math.floor(Math.random() * delays.length)];
+    setTimeout(() => { typeWriter(ele, text, ++idx) }, delay);
   }
 }
 
@@ -78,13 +79,6 @@ window.addEventListener("load", () => {
       <path d="M2 12C10.3333 -1.33333 18.6667 -1.33333 27 12C35.3333 25.3333 43.6667 25.3333 52 12C60.3333 -1.33333 68.6667 -1.33333 77 12C85.3333 25.3333 93.6667 25.3333 102 12C110.333 -1.33333 118.667 -1.33333 127 12C135.333 25.3333 143.667 25.3333 152 12C160.333 -1.33333 168.667 -1.33333 177 12C185.333 25.3333 193.667 25.3333 202 12C210.333 -1.33333 218.667 -1.33333 227 12C235.333 25.3333 243.667 25.3333 252 12" stroke="black" stroke-width="3"/>
     </svg>
   `
+
   typeWriter(document.getElementsByClassName('typewriter-text')[0], "Hey, I'm Kevin!");
 });
-
-// async function typewriter(text, element, delay = 100) {
-//   const chars = text.split('');
-//   for(let i = 0; i < text.length; i++) {}
-// }
-
-
-
