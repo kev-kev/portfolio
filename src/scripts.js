@@ -81,4 +81,5 @@ window.addEventListener("load", () => {
   `
 
   typeWriter(document.getElementsByClassName('typewriter-text')[0], "Hey, I'm Kevin!");
+  // document.querySelector('iframe').playVideo();
 });
