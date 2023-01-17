@@ -13,6 +13,8 @@ card shadows - B8BF9A
 button shadows - #1B1B1B
 */
 
+/* first breakpoint: 880 */
+
 @keyframes blink {
   0% {opacity: 0;}
   40% {opacity: 0;}
@@ -205,6 +207,9 @@ body {
 
 .music-control-btns-container {
   font-size: 1.7rem;
+}
+
+.pause-btn {
 }
 
 #project-card-container {

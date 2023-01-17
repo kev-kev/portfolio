@@ -26,17 +26,26 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 function onPlayerReady(event) {
   // add event listeners to player buttons
-  document.querySelector(".fa-circle-play").addEventListener("click", () => {
+  document.querySelector(".play-btn").addEventListener("click", () => {
     event.target.playVideo();
   });
+  document.querySelector(".fa-circle-pause").addEventListener("click", () => {
+    pauseVideo(); 
+  })
 }
 
+let done = false;
 function onPlayerStateChange(event) {
   console.log("player state changed to", event.data);
   if (event.data == YT.PlayerState.PLAYING && !done) {
     console.log("Going to stop video in 6 secs");
     setTimeout(stopVideo, 6000);
+    done = true;
   }
+}
+
+function pauseVideo() {
+  player.pauseVideo();
 }
 
 function stopVideo() {
@@ -62,6 +71,7 @@ function onYouTubeIframeAPIReady() {
 window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
 
 window.addEventListener("load", () => { 
+
   // create project cards
   const projectCardContainer = document.getElementById('project-card-container');
   for(let i = 0; i < projectData.length; i++) {
@@ -124,5 +134,18 @@ window.addEventListener("load", () => {
   `
 
   typeWriter(document.getElementsByClassName('typewriter-text')[0], "Hey, I'm Kevin!");
-  // document.querySelector('iframe').playVideo();
+
+  const play = document.querySelector('.play-btn');
+  const pause = document.querySelector('.pause-btn');
+  const container = document.querySelector('.play-pause-container');
+  pause.setAttribute('style', 'display: none;');
+  container.addEventListener("click", (e) => {
+    if([...e.target.classList].find(className => className === 'fa-circle-play')) {
+      play.setAttribute('style', 'display: none;');
+      pause.setAttribute('style', 'display: inline;');
+    } else {
+      play.setAttribute('style', 'display: inline;');
+      pause.setAttribute('style', 'display: none;');
+    }
+  })
 });
