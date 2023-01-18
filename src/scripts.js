@@ -8,11 +8,13 @@ const barColors = {
   pink: '#FF93F4',
 };
 
-// set bar colors
-const colorValues = Object.values(barColors);
-[...document.getElementsByClassName('card-bar')].forEach((bar) => {
-  bar.style.backgroundColor = colorValues[Math.floor(Math.random()*colorValues.length)];
-})
+const setBarColors = (bars) => {
+  const colorValues = Object.values(barColors);
+  [...bars].forEach((bar) => {
+    bar.style.backgroundColor = colorValues[Math.floor(Math.random()*colorValues.length)];
+  })
+}
+setBarColors(document.getElementsByClassName('header-card-bar'));
 
 // add fa icons
 const iconContainers = document.getElementsByClassName('card-bar-icon-container')
@@ -84,7 +86,7 @@ window.addEventListener("load", () => {
     const projectCard = document.createElement('div');
     projectCard.setAttribute('class', 'card project-card');
     const cardBar = document.createElement('div');
-    cardBar.setAttribute('class', 'card-bar');
+    cardBar.setAttribute('class', 'card-bar project-card-bar');
     const iconContainer = document.createElement('div');
     iconContainer.setAttribute('class', 'card-bar-icon-container');
     const content = document.createElement('div');
@@ -93,6 +95,7 @@ window.addEventListener("load", () => {
     projectCard.append(cardBar, content);
     projectCardContainer.append(projectCard);
   }
+  setBarColors([...document.getElementsByClassName('project-card-bar')]);
 
   let idx = 0;
   [...document.getElementsByClassName('project-card-content')].forEach((content) => {
