@@ -34,6 +34,14 @@ a {
   text-decoration: none;
 }
 
+a:visited {
+  color: #1B1B1B;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 body {
   background-color: #b3c383;
   background-size: 2rem 2rem;
@@ -209,7 +217,7 @@ body {
   font-size: 1.7rem;
 }
 
-.play-btn, .pause-btn {
+.play-btn, .pause-btn, .back-btn, .fwd-btn {
   cursor: pointer;
 }
 
