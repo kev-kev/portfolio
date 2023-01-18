@@ -8,6 +8,30 @@ const barColors = {
   pink: '#FF93F4',
 };
 
+const songData = [
+  {
+    title: 'Skylar Spence',
+    artist: 'St. Pepsi',
+    id: 'AJA77S11BmM'
+  },
+  {
+    title: '8 Now',
+    artist: 'Food House',
+    id: 'nCIteMfhBWA'
+  },
+  {
+    title: 'collar',
+    artist: 'saoirse dream, Can of Bliss',
+    id: 'i1D8WkGuq4g'
+  },
+  {
+    title: 'Walkabout',
+    artist: 'Atlas Sound W/ Noah Lennox',
+    id: 'ExUAqfIPHY0'
+  }
+];
+let songIndex = 0;
+
 const delays = [75, 100, 150];
 function typeWriter(ele, text, idx = 0, delay = 100) {
   if (idx < text.length) {
@@ -137,9 +161,8 @@ window.addEventListener("load", () => {
 
   const play = document.querySelector('.play-btn');
   const pause = document.querySelector('.pause-btn');
-  const container = document.querySelector('.play-pause-container');
   pause.setAttribute('style', 'display: none;');
-  container.addEventListener("click", (e) => {
+  document.querySelector('.play-pause-container').addEventListener("click", (e) => {
     if([...e.target.classList].find(className => className === 'fa-circle-play')) {
       play.setAttribute('style', 'display: none;');
       pause.setAttribute('style', 'display: inline;');
@@ -148,4 +171,10 @@ window.addEventListener("load", () => {
       pause.setAttribute('style', 'display: none;');
     }
   })
+
+  // when clicking on fwd / back buttons, stop current song, increment songIndex, and play next song
+
+  document.querySelector('.music-card-song').innerHTML = songData[songIndex].title;
+  document.querySelector('.music-card-artist').innerHTML = songData[songIndex].artist;
+  document.getElementById('yt-link').setAttribute('href', `https://www.youtube.com/watch?v=${songData[songIndex].id}`)
 });

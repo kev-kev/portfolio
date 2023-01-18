@@ -209,7 +209,8 @@ body {
   font-size: 1.7rem;
 }
 
-.pause-btn {
+.play-btn, .pause-btn {
+  cursor: pointer;
 }
 
 #project-card-container {
