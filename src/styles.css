@@ -217,8 +217,12 @@ body {
   font-size: 1.7rem;
 }
 
-.play-btn, .pause-btn, .back-btn, .fwd-btn {
+.play-btn, .pause-btn, .back-btn, .fwd-btn, .mute-btn, .unmute-btn {
   cursor: pointer;
+}
+
+.unmute-btn {
+  margin-right: 2px;
 }
 
 #project-card-container {
@@ -226,6 +230,7 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
 .projects-container-title {
   font-size: 54px;
   font-weight: 900;
