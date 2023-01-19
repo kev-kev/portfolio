@@ -129,25 +129,23 @@ window.addEventListener("load", () => {
     player.cueVideoById(songData[songIndex].id);
     player.nextVideo();
     setSongData();
+    document.querySelector('.play-btn').setAttribute('style', 'display: inline;');
+    document.querySelector('.pause-btn').setAttribute('style', 'display: none;');
   }
 
   setSongData();
   
   const play = document.querySelector('.play-btn');
-  play.addEventListener("click", () => {
-    player.playVideo();
-  });
   const pause = document.querySelector('.pause-btn');
-  pause.addEventListener("click", () => {
-    player.pauseVideo();
-  });
   document.querySelector('.play-pause-container').addEventListener("click", (e) => {
     if([...e.target.classList].find(className => className === 'fa-circle-play')) {
       play.setAttribute('style', 'display: none;');
       pause.setAttribute('style', 'display: inline;');
+      player.playVideo();
     } else {
       play.setAttribute('style', 'display: inline;');
       pause.setAttribute('style', 'display: none;');
+      player.pauseVideo();
     }
   });
 
@@ -159,7 +157,6 @@ window.addEventListener("load", () => {
       unmute.setAttribute('style', 'display: inline;');
       player.mute();
     } else {
-      debugger
       mute.setAttribute('style', 'display: inline;');
       unmute.setAttribute('style', 'display: none;');
       player.unMute();
