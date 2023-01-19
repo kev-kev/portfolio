@@ -15,6 +15,10 @@ button shadows - #1B1B1B
 
 /* first breakpoint: 880 */
 
+html {
+  scroll-behavior: smooth;
+}
+
 @keyframes blink {
   0% {opacity: 0;}
   40% {opacity: 0;}
@@ -26,7 +30,7 @@ h2 {
   font-family: "Outfit";
 }
 
-p, button, span {
+p, button, span, div {
   font-family: "Spline Sans";
 }
 
@@ -50,6 +54,57 @@ body {
     linear-gradient(to bottom, #CED8AE 1px, transparent 1px);
   display: flex;
   justify-content: center;
+}
+
+.background-shape {
+  position: absolute;
+  z-index: -1;
+}
+
+.background-star1 {
+  left: 10px;
+  top: 20px;
+  opacity: 0.5;
+}
+
+.background-star2 {
+  left: 90%;
+  top: 50%;
+}
+
+.background-star4 {
+  right: 10px;
+  top: 150%;
+}
+
+.background-star3 {
+  right: 5px;
+  top: 200%;
+  opacity: 0.5;
+}
+
+.background-star5 {
+  top: 250%;
+  left: 10px;
+  rotate: 65deg;
+}
+
+.ellipse1 {
+  right: 10px;
+  top: 15px;
+  opacity: 0.5;
+}
+
+.ellipse2 {
+  left: 10px;
+  top: 100%;
+  opacity: 0.5;
+}
+
+.ellipse3 {
+  right: 10px;
+  top: 300%;
+  opacity: 0.5;
 }
 
 .main-content {
@@ -88,6 +143,15 @@ body {
   font-size: 38px;
   margin-top: 0;
   display: inline;
+}
+
+a.btn {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-align: center;
+  text-decoration: none;
+  color: initial;
 }
 
 .btn {
@@ -179,6 +243,7 @@ body {
 
 .music-card-artist {
   margin-top: .3rem;
+  /* margin-bottom: .7rem; */
   font-size: 14px;
 }
 
@@ -299,3 +364,61 @@ card-bar-title {
   padding: 0 .3rem;
 }
 
+.music-top-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.music-bars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.music-bar {
+  width: 5px;
+  height: 25px;
+  background: #000000;
+  margin: 3px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  display: none;
+}
+
+.music-bar-animated {
+  animation: mainBar ease-in-out 0.8s infinite;
+  display: inline;
+}
+
+.music-bar:nth-child(2n) {
+  height: 15px;
+}
+
+.music-bar-animated:nth-child(2n){
+  animation: secBar ease-in-out 0.8s infinite;
+}
+
+@keyframes mainBar {
+  0% {
+    height: 25px;
+  }
+  60% {
+    height: 10px;
+  }
+  100% {
+    height: 26px;
+  }
+}
+
+@keyframes secBar {
+  0% {
+    height: 8px;
+  }
+  60% {
+    height: 26px;
+  }
+  100% {
+    height: 9px;
+  }
+}

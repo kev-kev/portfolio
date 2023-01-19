@@ -53,7 +53,7 @@
                 </span>
               </div>
               <p>If you want to see some of my projects, keep scrolling down!</p>
-              <button class="btn info-btn">LET'S GO!</button>
+              <a class="btn info-btn" href="#project-card-container">LET'S GO!</a>
             </div>
           </div>
           <div class="card header-card music-card">
@@ -62,12 +62,27 @@
               <div class="card-bar-icon-container"></div>
             </div>
             <div class="card-content">
-              <span class="music-card-song">&nbsp;</span>
-              <span class="music-card-artist">&nbsp;</span>
+              <div class="music-top-container">
+                <div class="music-bars">
+                  <div class="music-bar"></div>
+                  <div class="music-bar"></div>
+                  <div class="music-bar"></div>
+                </div>
+                <div>
+                  <div class="music-card-song">&nbsp;</div>
+                  <div class="music-card-artist">&nbsp;</div>  
+                </div>
+                <div class="music-bars">
+                  <div class="music-bar"></div>
+                  <div class="music-bar"></div>
+                  <div class="music-bar"></div>
+                </div>
+              </div>
               <div class="music-card-player-container">
                 <div class="progress-bar-container">
                   <hr class="progress-bar"/>
-                  <i class="progress-circle fa-regular fa-circle"></i>
+                  <!-- <i class="progress-circle fa-regular fa-circle"></i>
+                 -->
                 </div>
                 <div class="music-icons-container">
                   <span class="vol-icon-container">
@@ -97,6 +112,15 @@
 
     <!-- iframe player replaces this -->
     <div id="player"></div>
+    <img src="./images/backgroundStar1.png" class="background-star1 background-shape"/>
+    <img src="./images/backgroundStar2.png" class="background-star2 background-shape"/>
+    <img src="./images/ellipse.png" class="ellipse1 background-shape"/>
+    <img src="./images/backgroundStar1.png" class="background-star3 background-shape"/>
+    <img src="./images/ellipse.png" class="ellipse2 background-shape"/>
+    <img src="./images/backgroundStar2.png" class="background-star4 background-shape"/>
+    <img src="./images/backgroundStar2.png" class="background-star5 background-shape"/>
+    <div id="player"></div>
+    <img src="./images/ellipse.png" class="ellipse3 background-shape"/>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({

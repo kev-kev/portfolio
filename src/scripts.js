@@ -15,7 +15,22 @@ const setBarColors = (bars) => {
   })
 }
 setBarColors(document.getElementsByClassName('header-card-bar'));
-
+// create project cards
+const projectCardContainer = document.getElementById('project-card-container');
+for(let i = 0; i < projectData.length; i++) {
+  const projectCard = document.createElement('div');
+  projectCard.setAttribute('class', 'card project-card');
+  const cardBar = document.createElement('div');
+  cardBar.setAttribute('class', 'card-bar project-card-bar');
+  const iconContainer = document.createElement('div');
+  iconContainer.setAttribute('class', 'card-bar-icon-container');
+  const content = document.createElement('div');
+  content.setAttribute('class', 'project-card-content card-content');
+  cardBar.append(iconContainer);
+  projectCard.append(cardBar, content);
+  projectCardContainer.append(projectCard);
+}
+setBarColors([...document.getElementsByClassName('project-card-bar')]);
 // add fa icons
 const iconContainers = document.getElementsByClassName('card-bar-icon-container');
 for(const iconContainer of iconContainers) {
@@ -73,24 +88,14 @@ function onYouTubeIframeAPIReady() {
   });
 }
 window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
+const setSongData = () => {
+  document.querySelector('.music-card-song').innerHTML = songData[songIndex].title;
+  document.querySelector('.music-card-artist').innerHTML = songData[songIndex].artist;
+  document.getElementById('yt-link').setAttribute('href', `https://www.youtube.com/watch?v=${songData[songIndex].id}`);
+}
+setSongData();
 
 window.addEventListener("load", () => { 
-  // create project cards
-  const projectCardContainer = document.getElementById('project-card-container');
-  for(let i = 0; i < projectData.length; i++) {
-    const projectCard = document.createElement('div');
-    projectCard.setAttribute('class', 'card project-card');
-    const cardBar = document.createElement('div');
-    cardBar.setAttribute('class', 'card-bar project-card-bar');
-    const iconContainer = document.createElement('div');
-    iconContainer.setAttribute('class', 'card-bar-icon-container');
-    const content = document.createElement('div');
-    content.setAttribute('class', 'project-card-content card-content');
-    cardBar.append(iconContainer);
-    projectCard.append(cardBar, content);
-    projectCardContainer.append(projectCard);
-  }
-  setBarColors([...document.getElementsByClassName('project-card-bar')]);
 
   let idx = 0;
   [...document.getElementsByClassName('project-card-content')].forEach((content) => {
@@ -99,7 +104,7 @@ window.addEventListener("load", () => {
       <div class="project-card-text-container">
         <h2 class="project-card-title">${projectData[idx].name}</h2>
         <p class="project-card-description">${projectData[idx].notes}</p>
-        <a href='${projectData[idx].url}' target="_blank"><button class="btn">VISIT PROJECT</button></a>
+        <a class="btn" href='${projectData[idx].url}' target="_blank">VISIT PROJECT</a>
       </div>
     `;
     const cardBarTitle = document.createElement('span');
@@ -119,33 +124,42 @@ window.addEventListener("load", () => {
   `;
   typeWriter(document.getElementsByClassName('typewriter-text')[0], "Hey, I'm Kevin!");
 
-  const setSongData = () => {
-    document.querySelector('.music-card-song').innerHTML = songData[songIndex].title;
-    document.querySelector('.music-card-artist').innerHTML = songData[songIndex].artist;
-    document.getElementById('yt-link').setAttribute('href', `https://www.youtube.com/watch?v=${songData[songIndex].id}`);
-  }
+ 
+  const play = document.querySelector('.play-btn');
+  const pause = document.querySelector('.pause-btn');
+  const musicBars = document.getElementsByClassName('music-bar');
+
+  const playSong = () => {
+    play.setAttribute('style', 'display: none;');
+    pause.setAttribute('style', 'display: inline;');
+    player.setVolume(20);
+    player.playVideo();
+    [...musicBars].forEach(musicBar => {
+      musicBar.classList.add("music-bar-animated");
+    });
+  };
+
+  const pauseSong = () => { 
+    play.setAttribute('style', 'display: inline;');
+    pause.setAttribute('style', 'display: none;');
+    player.pauseVideo();
+    [...musicBars].forEach(musicBar => {
+      musicBar.classList.remove("music-bar-animated");
+    });
+  };
 
   const changeSong = () => {
     player.cueVideoById(songData[songIndex].id);
     player.nextVideo();
     setSongData();
-    document.querySelector('.play-btn').setAttribute('style', 'display: inline;');
-    document.querySelector('.pause-btn').setAttribute('style', 'display: none;');
+    pauseSong();
   }
-
-  setSongData();
   
-  const play = document.querySelector('.play-btn');
-  const pause = document.querySelector('.pause-btn');
   document.querySelector('.play-pause-container').addEventListener("click", (e) => {
     if([...e.target.classList].find(className => className === 'fa-circle-play')) {
-      play.setAttribute('style', 'display: none;');
-      pause.setAttribute('style', 'display: inline;');
-      player.playVideo();
+      playSong();
     } else {
-      play.setAttribute('style', 'display: inline;');
-      pause.setAttribute('style', 'display: none;');
-      player.pauseVideo();
+      pauseSong();
     }
   });
 
