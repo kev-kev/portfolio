@@ -130,6 +130,7 @@ body {
   border: 2px solid black;
   border-radius: 4px;
   padding: 3rem;
+  width: 65%;
 }
 
 .card {
@@ -325,12 +326,13 @@ a.btn {
 
 .project-card {
   width: 80%;
+  max-width: 700px;
 }
 
 .project-card-content {
   flex-direction: row;
   justify-content: space-between;
-  margin: 1rem;
+  padding: 2rem;
 }
 
 .project-card-img {
@@ -344,7 +346,7 @@ a.btn {
 }
 
 .project-card-text-container {
-  margin: 1rem 0 3rem 1rem;
+  margin: 1rem 0 3rem 2rem;
   width: 40%;
   display: flex;
   flex-direction: column;
@@ -438,33 +440,35 @@ card-bar-title {
   }
 }
 
-/* main content width breakpoints */
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
   .main-content {
-    width: 60%;
+    width: 75%;
   }
+  
 }
-@media (min-width: 992px) {
+@media (max-width: 992px) {
   .main-content {
     width: 70%;
   }
+  .project-card {
+    width: 90%;
+  }
 }
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .main-content {
     width: 75%;
     padding: 2rem;
   }
+
 }
-@media (min-width: 600px) {
-  .main-content {
-    width: 80%;
-    padding: 1rem;
-  }
-}
+
 @media (max-width: 600px) {
   .main-content {
     width: 90%;
     padding: .5rem;
+  }
+  .project-card {
+    width: 95%;
   }
 }
 

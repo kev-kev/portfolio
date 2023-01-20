@@ -104,7 +104,7 @@ window.addEventListener("load", () => {
       <div class="project-card-text-container">
         <h2 class="project-card-title">${projectData[idx].name}</h2>
         <p class="project-card-description">${projectData[idx].notes}</p>
-        <a class="btn" href='${projectData[idx].url}' target="_blank">VISIT PROJECT</a>
+        <a class="btn project-card-btn" href='${projectData[idx].url}' target="_blank">VISIT PROJECT</a>
       </div>
     `;
     const cardBarTitle = document.createElement('span');
