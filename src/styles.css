@@ -160,6 +160,10 @@ body {
   display: inline;
 }
 
+.emote {
+  margin-left: 1rem;
+}
+
 a.btn {
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -179,7 +183,7 @@ a.btn {
   cursor: pointer;
   background-color: #82B4FF;
   letter-spacing: .1rem;
-  width: 75%;
+  width: 70%;
   align-self: center;
   /* justify-self: flex-end; */
 }
@@ -238,7 +242,7 @@ a.btn {
 
 .personal-links-entry {
   display: block;
-
+  padding-top: .5rem;
 }
 
 .music-card {
@@ -440,6 +444,7 @@ card-bar-title {
   }
 }
 
+
 @media (max-width: 1200px) {
   .main-content {
     width: 75%;
@@ -481,9 +486,10 @@ card-bar-title {
     width: 75%;
     padding: 2rem;
   }
-
+  .card {
+    margin: 1rem;
+  }
 }
-
 @media (max-width: 600px) {
   .main-content {
     width: 90%;
@@ -492,5 +498,22 @@ card-bar-title {
   .project-card {
     width: 95%;
   }
+  .card {
+    margin: 1rem 2rem;
+  }
+  .project-card-img {
+    height: 10rem;
+  }
+
 }
 
+@media (max-width: 920px) {
+  .header-grid-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header-card {
+    max-width: 80%;
+  }
+}
