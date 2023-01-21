@@ -496,6 +496,7 @@ card-bar-title {
   }
   .project-card-btn {
     width: 50%;
+    margin-bottom: 1rem;
   }
 }
 @media (max-width: 992px) {

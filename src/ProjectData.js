@@ -20,6 +20,19 @@ const projectData = [
     imagePath: "src/images/holler.png",
   },
   {
+    name: "lunchtime",
+    url: "https://github.com/kev-kev/lunchtime",
+    notes: "Top-down pixel shooter game, made with Phaser + ES6 + Webpack",
+    imagePath: "src/images/lunchTime.png",
+  },
+  {
+    name: "Conway's Game of Life",
+    url: "https://github.com/kev-kev/game-of-life",
+    notes:
+      "An implementation of Conway's Game of Life. Created using HTML5 Canvas",
+    imagePath: "src/images/gameOfLife.png",
+  },
+  {
     name: "Verbose",
     url: "https://www.github.com/kev-kev/verbose",
     notes:
@@ -32,19 +45,6 @@ const projectData = [
     notes:
       "Online multiplayer game made using Websockets and React. Submit words, act them out, and guess them!",
     imagePath: "src/images/saladBowl.png",
-  },
-  {
-    name: "lunchtime",
-    url: "https://github.com/kev-kev/lunchtime",
-    notes: "Top-down pixel shooter game, made with Phaser + ES6 + Webpack",
-    imagePath: "src/images/lunchTime.png",
-  },
-  {
-    name: "Conway's Game of Life",
-    url: "https://github.com/kev-kev/game-of-life",
-    notes:
-      "An implementation of Conway's Game of Life. Created using HTML5 Canvas",
-    imagePath: "src/images/gameOfLife.png",
   },
   {
     name: "MyIslandTracker",
