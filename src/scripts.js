@@ -1,17 +1,20 @@
 import { projectData } from './ProjectData.js';
 
-const barColors = {
-  blue: '#82B4FF',
-  red: '#FF9587',
-  green: '#97DF5F',
-  yellow: '#FFE587',
-  pink: '#FF93F4',
-}
+const barColors = [
+  '#82B4FF',
+  '#FF9587',
+  '#97DF5F',
+  '#FFE587',
+  '#FF93F4',
+]
 
+
+let colorIdx = 0;
 const setBarColors = (bars) => {
-  const colorValues = Object.values(barColors);
   [...bars].forEach((bar) => {
-    bar.style.backgroundColor = colorValues[Math.floor(Math.random()*colorValues.length)];
+    bar.style.backgroundColor = barColors[colorIdx];
+    colorIdx++;
+    if(colorIdx === barColors.length) colorIdx = 0;
   })
 }
 setBarColors(document.getElementsByClassName('header-card-bar'));
