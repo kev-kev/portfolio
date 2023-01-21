@@ -33,13 +33,6 @@ html {
   scroll-behavior: smooth;
 }
 
-@keyframes blink {
-  0% {opacity: 0;}
-  40% {opacity: 0;}
-  60% {opacity: 1;}
-  100% {opacity: 1;}
-}
-
 h2 {
   font-family: "Outfit";
 }
@@ -72,18 +65,24 @@ body {
 
 .background-shape {
   position: absolute;
-  z-index: -1;
+  z-index: -3;
 }
 
 .background-star1 {
-  left: 10px;
-  top: 20px;
+  left: 7%;
+  top: 20%;
   opacity: 0.5;
 }
 
 .background-star2 {
-  left: 90%;
-  top: 50%;
+  left: 4%;
+  top: 100%;
+}
+
+.background-star3 {
+  left: 5px;
+  top: 200%;
+  opacity: 0.5;
 }
 
 .background-star4 {
@@ -91,34 +90,49 @@ body {
   top: 150%;
 }
 
-.background-star3 {
-  right: 5px;
-  top: 200%;
-  opacity: 0.5;
-}
-
 .background-star5 {
   top: 250%;
   left: 10px;
-  rotate: 65deg;
+  transform: rotate(65deg);
 }
 
-.ellipse1 {
+.background-ellipse1 {
   right: 10px;
-  top: 15px;
+  top: 50%;
   opacity: 0.5;
 }
 
-.ellipse2 {
-  left: 10px;
-  top: 100%;
-  opacity: 0.5;
-}
-
-.ellipse3 {
+.background-ellipse3 {
   right: 10px;
   top: 300%;
   opacity: 0.5;
+}
+
+.foreground-shape {
+  position: absolute;
+  opacity: .6;
+}
+
+.foreground-star1 {
+  left: 75%;
+  top: 105%;
+}
+
+.foreground-star2 {
+  right: 20%;
+  transform: rotate(40deg);
+}
+
+.foreground-ellipse1 {
+  left: 20%;
+  top: 120%;
+  transform: rotate(90deg);
+}
+
+.foreground-ellipse2 {
+  right: 15%;
+  top: 200%;
+  transform: rotate(180deg);
 }
 
 .main-content {
@@ -139,6 +153,7 @@ body {
   box-shadow: 4px 4px #B8BF9A;
   background-color: white;
   margin: 2rem;
+  z-index: 1;
 }
 
 .card-header-bar {
@@ -192,6 +207,13 @@ a.btn {
   grid-row: 1 / 3;
   grid-column: 1 / 4;
   margin-left: 3rem;
+}
+
+@keyframes blink {
+  0% {opacity: 0;}
+  40% {opacity: 0;}
+  60% {opacity: 1;}
+  100% {opacity: 1;}
 }
 
 .typewriter-cursor {
@@ -462,7 +484,8 @@ card-bar-title {
     text-align: center;
     width: 100%;
     display: block;
-    margin: 1rem 0;
+    margin: 0;
+    padding-top: 1rem;
   }
   .project-card-img {
     width: 100%;
@@ -497,7 +520,7 @@ card-bar-title {
     align-items: center;
   }
   .header-img {
-    width: 50%;
+    width: 45%;
   }
   .header-grid-1 > .header-card {
     width: 80%;
