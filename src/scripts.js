@@ -44,6 +44,16 @@ for(const iconContainer of iconContainers) {
   `;
 }
 
+const delays = [75, 100, 150];
+function typeWriter(ele, text, idx = 0, delay = 100) {
+  if (idx < text.length) {
+    ele.innerHTML += text.charAt(idx);
+    if(text.charAt(idx + 1) === ' ') delay = 250;
+    else delay = delays[Math.floor(Math.random() * delays.length)];
+    setTimeout(() => { typeWriter(ele, text, ++idx) }, delay);
+  }
+}
+
 const songData = [
   {
     title: 'Skylar Spence',
@@ -68,16 +78,7 @@ const songData = [
 ];
 let songIndex = 0;
 
-const delays = [75, 100, 150];
-function typeWriter(ele, text, idx = 0, delay = 100) {
-  if (idx < text.length) {
-    ele.innerHTML += text.charAt(idx);
-    if(text.charAt(idx + 1) === ' ') delay = 250;
-    else delay = delays[Math.floor(Math.random() * delays.length)];
-    setTimeout(() => { typeWriter(ele, text, ++idx) }, delay);
-  }
-}
-
+// youtube iframe api setup
 var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
