@@ -180,7 +180,7 @@ body {
   margin-bottom: 0.2rem;
 }
 .pizza-span {
-  text-shadow: 0.5px 0 currentColor;
+  text-shadow: 0.2px 0 currentColor;
 }
 
 .emote {
@@ -261,7 +261,7 @@ a.btn {
   grid-column: 1;
   grid-row: 2 / 6;
   width: 80%;
-  height: 110%;
+  height: 115%;
 }
 
 .info-btn {
