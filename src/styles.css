@@ -177,7 +177,7 @@ body {
 }
 
 .pizza-p {
-  margin-bottom: 0.2rem;
+  margin: 0.3rem 0;
 }
 .pizza-span {
   text-shadow: 0.2px 0 currentColor;
@@ -231,6 +231,11 @@ a.btn {
   background-color: black;
   margin-left: .5rem;
   animation: blink .5s infinite alternate;
+}
+
+.typewriter-container {
+  line-height: 1.4rem;
+  margin-bottom: 1rem;
 }
 
 .header-img {
@@ -523,17 +528,6 @@ card-bar-title {
   .card {
     margin: 1rem;
   }
-  .header-grid-1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .header-img {
-    width: 45%;
-  }
-  .header-grid-1 > .header-card {
-    width: 80%;
-  }
 }
 @media (max-width: 600px) {
   .main-content {
@@ -566,5 +560,19 @@ card-bar-title {
 @media (max-width: 1380px) {
   .info-card {
     height: 115%;
+  }
+}
+
+@media (max-width: 890px) {
+  .header-grid-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header-img {
+    width: 45%;
+  }
+  .header-grid-1 > .header-card {
+    width: 80%;
   }
 }
