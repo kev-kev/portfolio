@@ -176,11 +176,17 @@ body {
   display: inline;
 }
 
-.pizza-p {
-  margin: 0.3rem 0;
+.intro-blurb {
+  padding: 1rem 0;
 }
-.pizza-span {
+
+.intro-blurb-pizza {
+  padding-top: 1rem;
+}
+
+.intro-blurb-pizza-current {
   text-shadow: 0.2px 0 currentColor;
+  padding-top: 0.25rem;
 }
 
 .emote {
@@ -233,10 +239,9 @@ a.btn {
   animation: blink .5s infinite alternate;
 }
 
-.typewriter-container {
-  line-height: 1.4rem;
-  margin-bottom: .5rem;
-}
+/* .typewriter-container {
+  margin-bottom: .5rem; */
+/* } */
 
 .header-img {
   grid-column: 4;
