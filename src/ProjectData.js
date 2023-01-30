@@ -9,7 +9,7 @@ const projectData = [
   },
   {
     name: "Restaurant LP",
-    url: "",
+    url: "https://restaurant-lp.netlify.com/",
     github: "https://github.com/kev-kev/restaurant-lp",
     notes:
       "A responsive landing page for a fictional restaurant with a dynamic menu and reservation form. Built with vanilla JavaScript.",
@@ -24,14 +24,14 @@ const projectData = [
   },
   {
     name: "lunchtime",
-    url: "",
+    url: "https://lunchtime.glitch.me/",
     github: "https://github.com/kev-kev/lunchtime",
     notes: "Top-down pixel shooter game, made with Phaser + ES6 + Webpack",
     imagePath: "src/images/lunchTime.png",
   },
   {
     name: "Conway's Game of Life",
-    url: "",
+    url: "https://practice-game-of-life.glitch.me/",
     github: "https://github.com/kev-kev/game-of-life",
     notes:
       "An implementation of Conway's Game of Life. Created using HTML5 Canvas",
