@@ -141,7 +141,6 @@ body {
   margin: 2rem 4rem;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   border: 2px solid black;
   border-radius: 4px;
   padding: 3rem;
@@ -161,7 +160,6 @@ body {
   border-bottom: 2px solid black;
   width: 100%;
   height: 1.5rem;
-  /* border-radius: 4px; */
 }
 
 .card-content {
@@ -214,7 +212,6 @@ a.btn {
   letter-spacing: .1rem;
   width: 70%;
   align-self: center;
-  /* justify-self: flex-end; */
 }
 
 .intro-card {
@@ -298,13 +295,16 @@ a.btn {
   padding: 1rem 2rem;
 }
 
+.music-card-instructions {
+  font-size: .7rem;
+}
+
 .music-card-song {
   font-size: 20px;
 }
 
 .music-card-artist {
   margin-top: .3rem;
-  /* margin-bottom: .7rem; */
   font-size: 14px;
 }
 
@@ -387,8 +387,6 @@ a.btn {
   background-size: cover;
   border-radius: 4px;
   align-self: center;
-  /* box-shadow: 3px 3px #858585; */
-  /* border: 2px solid rgb(78, 78, 78); */
 }
 
 .project-card-text-container {
@@ -397,7 +395,6 @@ a.btn {
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  /* justify-content: space-around; */
 }
 
 .project-card-title {
@@ -409,18 +406,15 @@ a.btn {
   line-height: 1.5rem;
 }
 
+.project-card-btn {
+  margin-top: .5rem;
+}
+
 .card-bar{
   display: flex;
   justify-content: space-between;
   padding: .5rem;
   border-bottom: 2px solid black;
-}
-
-card-bar-title {
-}
-
-.card-bar-icon-container {
-  /* padding: .3rem; */
 }
 
 .bar-icon {

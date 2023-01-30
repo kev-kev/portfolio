@@ -108,7 +108,10 @@ window.addEventListener("load", () => {
       <div class="project-card-text-container">
         <h2 class="project-card-title">${projectData[idx].name}</h2>
         <p class="project-card-description">${projectData[idx].notes}</p>
-        <a class="btn project-card-btn" href='${projectData[idx].url}' target="_blank">VISIT PROJECT</a>
+        <div class="project-card-btn-container">
+          ${projectData[idx].url ? `<a class="btn project-card-btn" href='${projectData[idx].url}' target="_blank">VISIT PROJECT</a>`: ''}
+          <a class="btn project-card-btn" href='${projectData[idx].github}' target="_blank">VIEW GITHUB</a>
+        </div>
       </div>
     `;
     const cardBarTitle = document.createElement('span');
@@ -134,6 +137,7 @@ window.addEventListener("load", () => {
   const musicBars = document.getElementsByClassName('music-bar');
 
   const playSong = () => {
+    document.querySelector('.music-card-instructions').setAttribute('style', 'display: none;');
     play.setAttribute('style', 'display: none;');
     pause.setAttribute('style', 'display: inline;');
     player.setVolume(20);
