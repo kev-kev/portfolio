@@ -480,6 +480,73 @@ a.btn {
   }
 }
 
+@media (max-width: 890px) {
+  .header-grid-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header-img {
+    width: 45%;
+  }
+  .header-grid-1 > .header-card {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1380px) {
+  .info-card {
+    height: 115%;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-content {
+    width: 90%;
+    padding: .5rem;
+  }
+  .project-card {
+    width: 95%;
+  }
+  .card {
+    margin: 1rem 2rem;
+  }
+  .project-card-img {
+    height: 10rem;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    width: 75%;
+    padding: 2rem;
+  }
+  .card {
+    margin: 1rem;
+  }
+}
+
+@media (max-width: 920px) {
+  .header-grid-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header-card {
+    max-width: 80%;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .main-content {
+    width: 70%;
+  }
+  .project-card {
+    width: 90%;
+  }
+}
 
 @media (max-width: 1200px) {
   .main-content {
@@ -509,69 +576,5 @@ a.btn {
   .project-card-btn {
     width: 50%;
     margin-bottom: 1rem;
-  }
-}
-@media (max-width: 992px) {
-  .main-content {
-    width: 70%;
-  }
-  .project-card {
-    width: 90%;
-  }
-}
-@media (max-width: 768px) {
-  .main-content {
-    width: 75%;
-    padding: 2rem;
-  }
-  .card {
-    margin: 1rem;
-  }
-}
-@media (max-width: 600px) {
-  .main-content {
-    width: 90%;
-    padding: .5rem;
-  }
-  .project-card {
-    width: 95%;
-  }
-  .card {
-    margin: 1rem 2rem;
-  }
-  .project-card-img {
-    height: 10rem;
-  }
-
-}
-
-@media (max-width: 920px) {
-  .header-grid-2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .header-card {
-    max-width: 80%;
-  }
-}
-
-@media (max-width: 1380px) {
-  .info-card {
-    height: 115%;
-  }
-}
-
-@media (max-width: 890px) {
-  .header-grid-1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .header-img {
-    width: 45%;
-  }
-  .header-grid-1 > .header-card {
-    width: 80%;
   }
 }
